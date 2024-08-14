@@ -70,8 +70,18 @@ body {
   margin: 0;
   padding: 0;
   font-size: 14px;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
   /* font-family: "Nunito Sans", sans-serif; */
   /* font-family: 'Roboto', sans-serif; */
+  background-image: url("../public/background/desktopPlain.jpg");
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position: left top;
+  background-size: contain;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 h4 {
@@ -260,9 +270,18 @@ input::placeholder {
   padding-left: 8px;
 }
 
-.card-panel {
+.card-panels {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
   margin-top: 30px;
+  padding: 24px;
+  margin: .5rem 0 1rem 0;
 }
+
+
 
 .btn-large {
   background-color: #2E33D1;
@@ -694,7 +713,7 @@ grid-template-columns: auto minmax(0, 1fr) auto;
 
 /* toastify */
 .Toastify__toast-theme--light{
-  background-color: #062d9b;
+  background-color: #DDDDDD !important;
 }
 
 
@@ -755,6 +774,8 @@ grid-template-columns: auto minmax(0, 1fr) auto;
   top: 0;
   left: 0;
 }
+
+
 
 @media only screen and (max-width: 990px) {
   .btn-large {
@@ -955,6 +976,40 @@ grid-template-columns: auto minmax(0, 1fr) auto;
 
 .root,.container{
   overflow-y: auto;
+}
+
+
+/* background image responsiveness */
+@media (min-width: 1080px){
+  body {
+    background-image: url("../public/background/desktopPlain.jpg");
+
+  }
+
+}
+
+@media (max-width: 1080px) {
+  body {
+    background-image: url("../public/background/768-MAIN.jpg");
+  }
+}
+
+@media (max-width: 768px){
+  body {
+    background-image: url("../public/background/768-MAIN.jpg")
+  }
+}
+
+@media (max-width: 360px) {
+  body {
+    background-image: url("../public/background/360-main.jpg");
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    background-image: url("../public/background/320-main.jpg");
+  }
 }
 
 

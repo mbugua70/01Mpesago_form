@@ -12,12 +12,20 @@ export async function surveyForm(test) {
 
   const data = await res.json();
   if (!res.ok) {
-    console.log(data);
-    throw {
-      message: data.msg,
-      statusText: res.statusText,
-      status: res.status,
-    };
+    console.log(res.status);
+    if (res.status === 500) {
+      throw {
+        message: "Internal server error",
+        statusText: res.statusText,
+        status: res.status,
+      };
+    } else {
+      throw {
+        message: data.msg,
+        statusText: res.statusText,
+        status: res.status,
+      };
+    }
   }
   return data;
 }

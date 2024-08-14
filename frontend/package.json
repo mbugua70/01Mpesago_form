@@ -2,7 +2,7 @@
   "proxy": {
     "/customer_registration": "http://localhost:3000"
   },
-  "name": "bluebandug",
+  "name":"mpesagoform",
   "private": true,
   "version": "0.0.0",
   "type": "module",
